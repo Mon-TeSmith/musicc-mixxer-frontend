@@ -1,12 +1,9 @@
 import React, {Component} from "react";
-
+import LoginPage from "./Components/LoginPage/LoginPage";
+import HomePage from "./Components/HomePage/HomePage";
+// import LandingPage from "./Components/LandingPage/LandingPage";
 import {Switch, Route, Redirect} from 'react-router-dom';
-import Searchbar from "./components/Searchbar/Searchbar"
-import LoginForm from "./components/LoginForm/LoginForm"
-import Signup from "./components/Signup/Signup"
-import Home from './components/Home/Home'
 import jwtDecode from 'jwt-decode'
-import Logout from './components/logout/logout'
 
 
 class App extends Component {
@@ -14,9 +11,9 @@ class App extends Component {
         super(props);
         const jwt=localStorage.getItem('token');
         try{
-            const decodedUsers= jwtDecode(jwt);
+            const decodedUser = jwtDecode(jwt);
             this.state = {
-                user:decodedUser,
+                user: decodedUser,
             }
         }catch{
             this.state = {
@@ -28,26 +25,28 @@ class App extends Component {
     componentDidMount(){
         // JWT maybe set other than null
         const jwt=localStorage.getItem('token');
-        try{
+    try{
             const decodedUser= jwtDecode(jwt);
             this.setState({user: decodedUser});
-        }cach{
+        }catch{
 
-        }
-    }
+        };
+    
+}
+
     render(){
         return (
             <div className="App">
-                <Searchbar/>
-                <Logout />
                 <Switch>
                     <Route path="/" exact render={(props) =>{
-                        if(!this.state.user){
-                            return <Redirect to='/login' />
+                        if(this.state.user){
+                            return <h1>Profile</h1>
                         }else {
-                            return <Home {...props} />
+                            return <HomePage {...props} />
                         }
                     }}/>
+                    <Route path='/login' component={LoginPage} />
+                    {/* <Route path='/login' component={Signup} /> */}
                 </Switch>
             </div>
         )
