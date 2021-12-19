@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import LoginPage from "./Components/LoginPage/LoginPage";
 import HomePage from "./Components/HomePage/HomePage";
-// import LandingPage from "./Components/LandingPage/LandingPage";
 import {Switch, Route, Redirect} from 'react-router-dom';
 import jwtDecode from 'jwt-decode'
 
