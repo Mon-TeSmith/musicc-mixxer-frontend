@@ -1,32 +1,42 @@
+import { Title } from '@mui/icons-material';
 import { fontFamily } from '@mui/system';
-import React from 'react';
+import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import "./HomePage.css";
 
 
 const HomePage = (props) => {
     return ( 
-    <>    
-        
-            <h1 className="headerName">"Welcome to Musicc Mixxer"</h1>
-            <p className="phrase">Find your next collaborator</p>
+        <>    
+            <div>                
+                <ul>
+                    <li>
+                        <div>
+                            <h2 className="title">Musicc Mixxer</h2>
+                            <p className="phrase">Find Collaborators</p>
+                        
+                            
+                            <Link to='/loginPage'>
+                            <button className="loginButton btn-secondary">Login</button>
+                            </Link>
+                    
+                        
+                            <Link to='/signupPage'>
+                                <button className="signupButton btn-primary">Signup</button>
+                            </Link>
+                        
+                    
+                            <Link to='/searchPage'>
+                                <button className="searchButton btn-success">Search</button>
+                            </Link>
+                            <img className="bg-image" src="./Images/knobs.jpeg" alt="" />
+                        </div>
+                    </li>
+                    
+                </ul>
+            </div>     
             
-        <div>
-            <Link to='/findCreatives'>
-                <button className="searchButton">Search for Free</button>
-            </Link>
-            <Link to='/profilePage'>
-                <button className="loginButton">Login</button>
-            </Link>
-            <Link to='/register'>
-                <button className="signupButton">Signup</button>
-            </Link>
-            <div className="bg.image"></div>
-            <img src="./Images/console.jpeg" />
-        
-        </div>     
-          
-    </>      
+        </>      
     );          
 }       
 

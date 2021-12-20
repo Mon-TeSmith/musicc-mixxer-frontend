@@ -1,5 +1,7 @@
 import React, {Component} from "react";
 import LoginPage from "./Components/LoginPage/LoginPage";
+import SignupPage from "./Components/SignupPage/SignupPage";
+// import SearchPage from "./Components/SearchPage/SearchPage";
 import HomePage from "./Components/HomePage/HomePage";
 import {Switch, Route, Redirect} from 'react-router-dom';
 import jwtDecode from 'jwt-decode'
@@ -36,6 +38,7 @@ class App extends Component {
     render(){
         return (
             <div className="App">
+
                 <Switch>
                     <Route path="/" exact render={(props) =>{
                         if(this.state.user){
@@ -44,8 +47,9 @@ class App extends Component {
                             return <HomePage {...props} />
                         }
                     }}/>
-                    <Route path='/login' component={LoginPage} />
-                    {/* <Route path='/login' component={Signup} /> */}
+                    <Route path='/loginPage' component={LoginPage} />
+                    <Route path='/signupPage' component={SignupPage} />
+                    {/* <Route path='/findPage' component={SearchPage} /> */}
                 </Switch>
             </div>
         )

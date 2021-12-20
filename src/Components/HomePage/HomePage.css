@@ -1,51 +1,53 @@
-.headerName {
+.title {
+    font-family: sans-serif;
+    font-style: oblique;
+    font-stretch: ultra-expanded;
+    font-weight: 900;
+    font-size: 4rem;
     display: flex;
     position: center;
-    margin: auto;
-    font-size: 6rem;
-    
+    margin: auto; 
     text-decoration: underline;
     text-decoration: bold;
-    color:rgba(0, 0, 0, 0.92)
+    color:rgba(108, 5, 5, 0.79)
 }
 
 .phrase {
-    font-size: 3rem;
+    font-family: sans-serif;
+    font-style: oblique;
+    font-weight: bold;
+    font-stretch: ultra-expanded;
+    font-size: 1.5rem;
     position: center;
     margin: auto;
-    color: rgba(0, 0, 0, 0.872)
+    color: rgba(60, 26, 26, 0.735)
 }
 
 .bg-image {
-    outline: 2px solid black;
-    padding: 50em;
+    outline: .5px solid rgb(123, 5, 5);
+    padding: 0em;
     background-repeat: no-repeat;
-    border: 5px solid  rgb(82, 21, 14);
+    border: 1px solid  rgb(179, 170, 170);
+    opacity: 20;
 }
 
 .searchButton {
-    font-size: rem;
-    text-decoration: bold;
-    border: 5px solid rgb(82, 21, 14);
-    padding: 1.2em 2.25em;
-    box-shadow: rgb(0, 0, 0);
-   	color: rgb(64, 179, 36);
+    font-size: 2rem;
+    border: 5px solid rgb(0, 0, 0);
+    padding: 1em 1.2em;
+   	color: rgb(32, 116, 11);
 }
 
 .loginButton {
     font-size: 2rem;
-    text-decoration: bold;
-    border: 5px solid  rgb(82, 21, 14);
-    padding: 1em 2.25em;
-    box-shadow: rgb(89, 110, 113);
-   	color: rgb(120, 105, 20);
+    border: 5px solid  rgb(0, 0, 0);
+    padding: 1em 1em;
+   	color: rgb(72, 66, 30);
 }
 
 .signupButton {
     font-size: 2rem;
-    text-decoration: bold;
-    border: 5px solid rgb(82, 21, 14);
-    padding: 1em 2.25em;
-    box-shadow: rgb(89, 110, 113);
-   	color: rgb(26, 64, 109);
+    border: 5px solid rgb(0, 0, 0);
+    padding: 1em .6em;
+   	color: rgb(7, 71, 148);
 }
