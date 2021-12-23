@@ -28,10 +28,10 @@ function LoginPage(props) {
     return (
        
             <form className="loginPage" onSubmit={handlesubmit}>
-                <label>email</label>
+                <label>email:</label>
                     <input value={email} onChange={(event) => getEmail(event.target.value)} type='text' />
 
-                <label>password</label>
+                <label>password:</label>
                     <input value={password} onChange={(event) => getPassword(event.target.value)} type='text' />
                 
                     <button href="/profile" type='submit'>Log In</button>

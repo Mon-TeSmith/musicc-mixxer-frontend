@@ -3,7 +3,7 @@ import LoginPage from "./Components/LoginPage/LoginPage";
 import SignupPage from "./Components/SignupPage/SignupPage";
 // import SearchPage from "./Components/SearchPage/SearchPage";
 import HomePage from "./Components/HomePage/HomePage";
-import {Switch, Route, Redirect} from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import jwtDecode from 'jwt-decode'
 
 
