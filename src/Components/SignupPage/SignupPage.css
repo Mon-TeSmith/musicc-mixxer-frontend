@@ -3,12 +3,40 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+    background: linear-gradient(
+        rgba(228, 100, 100, 0.7),
+        rgba(91, 59, 59, 0.3)
+    ),
+    url("https://github.com/Mon-TeSmith/musicc-mixxer-frontend/blob/a58622a10ef0a18efdd6b0aff3a937b004723df3/public/Images/cassette.jpeg");
+    background-size: cover;
+    background-position: center;
     
-
 }
 
-.bg-img{
-    background-image: "../Images/headphones.jpeg";
-    opacity: .3;
+form {
+    background-color: whitesmoke;
+    padding: 0pz 50px;
+    border-radius: 10px;
 }
 
+h1 {
+    color: rgb(118, 17, 17);
+    text-align: center;
+}
+
+button {
+    width: 100%;
+    height: 25px;
+    padding: 0pz 10px;
+    border: cornsilk;
+    background-color: rgb(118, 17, 17);
+    color: rgb(227, 214, 214);
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    margin-top: 15px;;
+    margin-bottom: 30px;
+
+
+}
