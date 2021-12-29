@@ -1,4 +1,4 @@
-import { Title } from '@mui/icons-material';
+// import { Title } from '@mui/icons-material';
 import { fontFamily } from '@mui/system';
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
@@ -12,12 +12,12 @@ const HomePage = (props) => {
                 <ul>
                     <li>
                         <div>
-                            <h2 className="title">Musicc Mixxer</h2>
-                            <p className="phrase">Find Collaborators</p>
+                            <h1>Musicc Mixxer</h1>
+                            <p>Find Collaborators</p>
                         
                             
                             <Link to='/loginPage'>
-                            <button className="loginButton btn-secondary">Login</button>
+                                <button className="loginButton btn-secondary">Login</button>
                             </Link>
                     
                         

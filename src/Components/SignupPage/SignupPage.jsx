@@ -11,7 +11,7 @@ import { CleaningServices, LocalLaundryService } from '@mui/icons-material';
             birthday:"",
             password:"",
             errorMessage:"",
-            confirmPassword:"",
+            confirmPassword:""
         });
 
         const inputs = [
@@ -20,16 +20,20 @@ import { CleaningServices, LocalLaundryService } from '@mui/icons-material';
                 name:"username",
                 type:"text",
                 placeholder:"Username",
-                errorMessage:"UserName should be 5-16 characters and should not include any special characters!",
-                label:"Username:"
+                errorMessage:
+                "UserName should be 3-16 characters and should not include any special characters!",
+                label:"Username:",
+                pattern: "^[A-Za-z0-9]{5, 16}$",
+                required: true,
             },
             {
                 id:2,
                 name:"email",
-                type:"text",
+                type:"email",
                 placeholder:"Email",
                 errorMessage:"Should be a valid email address!",
-                label:"Email:"
+                label:"Email:",
+                required: true,
             },
             {
                 id:3,
@@ -45,15 +49,19 @@ import { CleaningServices, LocalLaundryService } from '@mui/icons-material';
                 type:"password",
                 placeholder:"Password",
                 errorMessage:"Password should be 8-20 characters and should at least include 1 letter, 1 number and 1 special character!",
-                label:"Password:"
+                label:"Password:",
+                pattern: "^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$",
+                required: true,
             },
             {
                 id:5,
                 name:"confirmPassword",
                 type:"password",
                 placeholder:"Confirm Password",
-                errorMessage:"Password don't match",
-                label:"Confirm Password:"
+                errorMessage:"Password needs to match",
+                label:"Confirm Password:",
+                pattern: "values.password",
+                required: true,
             }
         ];
 
@@ -69,7 +77,7 @@ import { CleaningServices, LocalLaundryService } from '@mui/icons-material';
     };  
 
     const onChange = (e) => {
-       setValues({...values, [e.target.name]: e.target.value });
+       setValues({ ...values, [e.target.name]: e.target.value });
     };
         console.log(values);
         return (
@@ -84,11 +92,10 @@ import { CleaningServices, LocalLaundryService } from '@mui/icons-material';
                                 onChange={onChange} 
                             />
                         ))}
-                    <button>Submit</button>
+                        <button>Submit</button>
                 </form>         
             </div>
     );  
  };
-  
         
  export default SignupPage;

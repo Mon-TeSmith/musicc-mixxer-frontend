@@ -1,45 +1,66 @@
-import React, {useState} from 'react';
+import {useState} from 'react';
+import FormInput from '../FormInput';
 import axios from 'axios';
-import "./LoginPage.css"
+import "./LoginPage.css";
 
+import { CleaningServices, LocalLaundryService } from '@mui/icons-material';
 
-function LoginPage(props) {
-    // const [username,getUsername]=useState('');
-    const[email, getEmail]=useState('');
-    const[password, getPassword]= useState('');
+const LoginPage =() => {
+    const [values, setValues] = useState({
+        username:"",
+        password:""
+    });
 
+    const inputs = [
+        {
+            id:1,
+            name:"username",
+            type:"text",
+            placeholder:"Username",
+            errorMessage:
+            "UserName should be 3-16 characters and should not include any special characters!",
+            label:"Username:",
+            pattern: "^[A-Za-z0-9]{5, 16}$",
+            required: true,
+        },
+        {
+            id:2,
+            name:"password",
+            type:"password",
+            placeholder:"Password",
+            errorMessage:"Password should be 8-20 characters and should at least include 1 letter, 1 number and 1 special character!",
+            label:"Password:",
+            pattern: "^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$",
+            required: true,
+        },
+    ];
 
-
-    async function handlesubmit(e){
-        e.preventDefault();
-
-        const getUser={
-            email:email,
-            password:password,
+        console.log("re-rendered");
+    
+        const handleSubmit = (e) => {
+            e.preventDefault();  
+        };  
+    
+        const onChange = (e) => {
+           setValues({ ...values, [e.target.name]: e.target.value });
         };
-        let response = await axios.post(`http://localhost:3000/api/users/login`, getUser);
-        if(response.status==200){
-            console.log(response.data);
-            localStorage.setItem('token', response.data)
-            window.location ='/';
-        }
-    }
-
-    return (
-       
-            <form className="loginPage" onSubmit={handlesubmit}>
-                <label>email:</label>
-                    <input value={email} onChange={(event) => getEmail(event.target.value)} type='text' />
-
-                <label>password:</label>
-                    <input value={password} onChange={(event) => getPassword(event.target.value)} type='text' />
-                
-                    <button href="/profile" type='submit'>Log In</button>
-                    <img className="/loginPage" src="./Images/mixer.jpeg" alt="" />
+            console.log(values);
+            return (
+            <div className="app"> 
+                <form onSubmit={handleSubmit}>
+                    <h1>Sign In</h1>
+                        {inputs.map((input) => (
+                        <FormInput
+                            key={input.id}
+                            {...input}
+                            value={values[input.name]}
+                            onChange={onChange}
+                         />
+                        ))};
+                         <button>Log In</button>
+                </form>
+            </div>
+        );  
+     };
             
-            </form>
-        
-    );
-}
-
-export default LoginPage;
+     export default LoginPage;

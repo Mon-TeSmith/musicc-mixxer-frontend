@@ -9,8 +9,7 @@
     ),
     url("https://github.com/Mon-TeSmith/musicc-mixxer-frontend/blob/a58622a10ef0a18efdd6b0aff3a937b004723df3/public/Images/cassette.jpeg");
     background-size: cover;
-    background-position: center;
-    
+    background-position: center; 
 }
 
 form {
@@ -20,8 +19,8 @@ form {
 }
 
 h1 {
-    color: rgb(118, 17, 17);
     text-align: center;
+    color: rgb(118, 17, 17);    
 }
 
 button {
@@ -37,6 +36,4 @@ button {
     cursor: pointer;
     margin-top: 15px;;
     margin-bottom: 30px;
-
-
 }
