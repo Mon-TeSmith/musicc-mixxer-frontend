@@ -4,7 +4,6 @@ import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import "./HomePage.css";
 
-
 const HomePage = (props) => {
     return ( 
         <>    
@@ -39,10 +38,5 @@ const HomePage = (props) => {
         </>      
     );          
 }       
-
-
-  
-
- 
 
 export default HomePage; 

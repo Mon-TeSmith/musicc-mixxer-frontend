@@ -3,8 +3,6 @@ import FormInput from '../FormInput';
 import axios from 'axios';
 import "./LoginPage.css";
 
-import { CleaningServices, LocalLaundryService } from '@mui/icons-material';
-
 const LoginPage =() => {
     const [values, setValues] = useState({
         username:"",
