@@ -1,5 +1,6 @@
+/* eslint-disable no-template-curly-in-string */
 import React, {useState} from "react";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import './Navbar.css';
 
   const Navbar = () => {
@@ -12,17 +13,19 @@ import './Navbar.css';
       >
         <div className="container">
           <div className="navbar-brand">  
-            <a
+            <Link
               role="button"
+              // eslint-disable-next-line no-template-curly-in-string
               className={'navbar-burger burger ${isOpen && "is-active"}'}
               aria-label="menu"
               aria-expanded="false"
               onClick={() => setOpen(!isOpen)}
-            >
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </a>
+              >
+            
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </Link>
         </div>
         
         <div className={'navbar-menu ${isOpen && "is-active"}'}>
@@ -53,8 +56,8 @@ import './Navbar.css';
           
          <div className="navbar-end">
            <div className="navbar-item">
-             <div className="buttons">
-               <a className="button is-white">Log In</a>
+             <div className="button">
+               <Link className="button is-white">Log In</Link>
              </div>
            </div>
           </div>
@@ -62,6 +65,6 @@ import './Navbar.css';
       </div>   
     </nav>
   );
-}; 
+}
 
 export default Navbar; 

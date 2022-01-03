@@ -1,42 +1,11 @@
-// import { Title } from '@mui/icons-material';
-import { fontFamily } from '@mui/system';
-import React, {useState} from 'react';
-import {Link} from 'react-router-dom';
+import React from 'react';
 import "./HomePage.css";
 
-const HomePage = (props) => {
-    return ( 
-        <>    
-            <div>                
-                <ul>
-                    <li>
-                        <div>
-                            <h1>Musicc Mixxer</h1>
-                            <p>Find Collaborators</p>
-                        
-                            
-                            <Link to='/loginPage'>
-                                <button className="loginButton btn-secondary">Login</button>
-                            </Link>
-                    
-                        
-                            <Link to='/signupPage'>
-                                <button className="signupButton btn-primary">Signup</button>
-                            </Link>
-                        
-                    
-                            <Link to='/searchPage'>
-                                <button className="searchButton btn-success">Search</button>
-                            </Link>
-                            <img className="bg-image" src="./Images/knobs.jpeg" alt="" />
-                        </div>
-                    </li>
-                    
-                </ul>
-            </div>     
-            
-        </>      
-    );          
-}       
+const HomePage = () => {    
+    <div>                
+        <h1 className="title is-1">This is the Home Page</h1>
+        <p>Welcome to Musicc Mixxer</p>
+    </div>           
+};     
 
 export default HomePage; 

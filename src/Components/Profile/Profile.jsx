@@ -1,5 +1,4 @@
 import { useParams } from "react-router";
-import { BrowserRouter } from "react-router-dom";
 
 const Profile = () => {
     const { name } = useParams();

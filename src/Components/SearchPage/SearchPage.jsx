@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
-import axios from 'axios';
-import './SearchPage.css'
+// import React, {useState} from 'react';
+// import axios from 'axios';
+// import './SearchPage.css'
 
 
 
@@ -12,10 +12,9 @@ import './SearchPage.css'
 
 //     async function handlesubmit(e){
 //         e.preventDefault();
-
-        
+   
 //     return (
-//         <form className="findPage" onSubmit={handlesubmit}>
+//         <form className="profile" onSubmit={handlesubmit}>
 //             <label>email</label>
 //             <input value={email} onChange={(event) => getEmail(event.target.value)} type='text' />
 
@@ -23,5 +22,4 @@ import './SearchPage.css'
 //             <input value={password} onchange={(event) => getPassword(event.target.value)} type='text' />    
 //         </form> 
 //     );
-
-export default SearchPage;
+// }
