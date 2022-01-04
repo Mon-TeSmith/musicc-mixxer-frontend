@@ -1,16 +1,18 @@
 import * as React from 'react';
 import ReactDOM from 'react-dom';
 import { StyledEngineProvider } from '@mui/material/styles';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter} from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import App from "../src/App"
+import App from "./App.jsx"
+
 
 
 ReactDOM.render(
-    <Router>
+    <BrowserRouter>
         <StyledEngineProvider injectFirst>
         <App />
         </StyledEngineProvider>
-        document.querySelector("#root")
-    </Router>
+        
+        
+    </BrowserRouter>, document.getElementById("root")
 );

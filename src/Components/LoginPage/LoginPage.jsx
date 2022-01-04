@@ -1,6 +1,6 @@
 import {useState} from 'react';
 import FormInput from '../FormInput';
-import axios from 'axios';
+// import axios from 'axios';
 import "./LoginPage.css";
 
 const LoginPage =() => {
@@ -14,7 +14,7 @@ const LoginPage =() => {
             id:1,
             name:"username",
             type:"text",
-            placeholder:"Username",
+            placeholder:"Username:",
             errorMessage:
             "UserName should be 3-16 characters and should not include any special characters!",
             label:"Username:",
@@ -25,10 +25,10 @@ const LoginPage =() => {
             id:2,
             name:"password",
             type:"password",
-            placeholder:"Password",
+            placeholder:"Password:",
             errorMessage:"Password should be 8-20 characters and should at least include 1 letter, 1 number and 1 special character!",
             label:"Password:",
-            pattern: "^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$",
+            pattern: "^(?=.*[a-zA-Z])(?=.*d)(?=.*[!@#$%^&*()_+])[A-Za-zd][A-Za-zd!@#$%^&*()_+]{7,19}$",
             required: true,
         },
     ];

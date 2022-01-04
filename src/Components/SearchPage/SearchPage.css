@@ -1,0 +1,22 @@
+* {
+    margin: 0;
+    padding: 0;
+
+}
+
+h1 {
+    color: rgba(145, 89, 84, 0.968);
+    margin-top: 30px;
+    margin-bottom: 60px;
+}
+
+div {
+    text-align: center;
+    
+    margin: auto;
+}
+
+button {
+    cursor: pointer;
+}
+

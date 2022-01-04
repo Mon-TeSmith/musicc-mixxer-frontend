@@ -1,58 +1,29 @@
-/* h1{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-style: oblique;
-    font-stretch: ultra-expanded;
-    font-weight: bolder;
-    font-size: 2rem;
-    display: flex;
-    position: center;
-    text-align: center;
-    margin: auto; 
-    text-decoration: underline;
-    text-decoration: bold;
-    color:rgba(108, 5, 5, 0.79)
-}
-
 p {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: oblique;
     font-weight: bold;
-    font-stretch: ultra-expanded;
-    font-size: 1.5rem;
+    font-stretch: normal;
+    font-size: 1.1rem;
     position: center;
     text-align: center;
     margin: auto;
-    color: rgba(60, 26, 26, 0.735)
+    color: rgba(0, 0, 0, 0.735)
 }
 
-.bg-image {
-    outline: .5px solid rgb(123, 5, 5);
-    padding: 0em;
-    background-repeat: no-repeat;
-    border: 1px solid  rgb(179, 170, 170);
-    opacity: 25;
+title is-1 {
+    font-style: oblique;
+
 }
 
-.searchButton {
-    font-size: 2.5rem;
-    font-weight: 800;
-    border: 1px solid rgb(0, 0, 0);
-    padding: 1.5em 1em;
-   	color:whitesmoke;
+.app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(
+        rgba(228, 100, 100, 0.7),
+        rgba(91, 59, 59, 0.3),
+    );
+    background-size: cover;
+    background-position: center; 
 }
-
-.loginButton {
-    font-size:2.5rem;
-    font-weight: 800;
-    border: 1px solid  rgb(0, 0, 0);
-    padding: 1.5em 1em;
-    color:whitesmoke;
-}
-
-.signupButton {
-    font-size: 2.5rem;
-    font-weight: 800;
-    border: 1px solid rgb(0, 0, 0);
-    padding: 1.5em 1em;
-    color:whitesmoke;
-} */

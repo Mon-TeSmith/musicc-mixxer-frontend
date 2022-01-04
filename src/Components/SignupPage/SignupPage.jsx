@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
-import axios from 'axios';
+// import axios from 'axios';
 import "./SignupPage.css"
 import FormInput from '../FormInput';
-import { CleaningServices, LocalLaundryService } from '@mui/icons-material';
+// import { CleaningServices, LocalLaundryService } from '@mui/icons-material';
 
     const SignupPage =() => {
         const [values, setValues] = useState({
@@ -50,7 +50,7 @@ import { CleaningServices, LocalLaundryService } from '@mui/icons-material';
                 placeholder:"Password",
                 errorMessage:"Password should be 8-20 characters and should at least include 1 letter, 1 number and 1 special character!",
                 label:"Password:",
-                pattern: "^(?=.*[a-zA-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d][A-Za-z\d!@#$%^&*()_+]{7,19}$",
+                pattern: "^(?=.*[a-zA-Z])(?=.*d)(?=.*[!@#$%^&*()_+])[A-Za-zd][A-Za-zd!@#$%^&*()_+]{7,19}$",
                 required: true,
             },
             {

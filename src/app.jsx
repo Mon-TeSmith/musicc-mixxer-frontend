@@ -1,17 +1,18 @@
-import React from "react";
-import {Route, BrowserRouter} from 'react-router-dom';
+import React, { Component } from "react";
+import {Route, Routes} from 'react-router-dom';
 import jwtDecode from 'jwt-decode'
 import LoginPage from "./Components/LoginPage/LoginPage";
 import SignupPage from "./Components/SignupPage/SignupPage";
 import Profile from "./Components/Profile/Profile";
-import Navbar from "./Components/Navbar/Navbar";
 import HomePage from "./Components/HomePage/HomePage";
-// import SearchPage from "./Components/SearchPage/SearchPage";
+import SearchPage from "./Components/SearchPage/SearchPage";
+// eslint-disable-next-line no-unused-vars
 import './App.css';
+import Navbar from "./Components/Navbar/Navbar";
 
 
 
-class App extends ("") {
+class App extends Component {
     constructor(props){
         super(props);
         const jwt=localStorage.getItem('token');
@@ -40,16 +41,17 @@ class App extends ("") {
 
     render() {
       return (
-        <BrowserRouter>
-        
-            <Route path="/" element={<HomePage />} />
-            <Route path="profile" element={<Profile />} />
-            <Route path="login" element={<LoginPage />} />
-            <Route path="signup" element={<SignupPage />} />
-            {/* <Route path="search" element={<SearchPage />} /> */}
-         
-         </BrowserRouter>
-      )
-    }
-}           
+        <div>
+        <Navbar/>
+          <Routes>
+              <Route path="/" exact element={<HomePage />} />
+              <Route path="login" element={<LoginPage/>} />
+              <Route path="signup" element={<SignupPage />} />
+              <Route path="search" element={<SearchPage />} />
+          </Routes>
+        </div>
+      );
+    };
+}    
+
 export default App;
