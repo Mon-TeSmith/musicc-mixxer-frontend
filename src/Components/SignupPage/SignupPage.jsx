@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-// import axios from 'axios';
+import axios from 'axios';
 import "./SignupPage.css"
 import FormInput from '../FormInput';
 // import { CleaningServices, LocalLaundryService } from '@mui/icons-material';
@@ -13,6 +13,30 @@ import FormInput from '../FormInput';
             errorMessage:"",
             confirmPassword:""
         });
+
+        async function handleSubmit(e){
+            e.preventDefault(); 
+            
+            const registerUser = {
+                name: values.username,
+                email: values.email,
+                password: values.password,
+                isAdmin: true
+            }
+
+            let response = await axios.post(`http://localhost:5000/api/users/register`, registerUser);
+            if (response.status === 200) {
+                console.log(response.data);
+                localStorage.setItem('token', response.data)
+                window.location ='/';
+            };
+
+            if (response.status === 400) {
+                console.log(response.error)
+            };
+        };
+
+        
 
         const inputs = [
             {
@@ -50,33 +74,26 @@ import FormInput from '../FormInput';
                 placeholder:"Password",
                 errorMessage:"Password should be 8-20 characters and should at least include 1 letter, 1 number and 1 special character!",
                 label:"Password:",
-                pattern: "^(?=.*[a-zA-Z])(?=.*d)(?=.*[!@#$%^&*()_+])[A-Za-zd][A-Za-zd!@#$%^&*()_+]{7,19}$",
+                // pattern: "^(?=.*[a-zA-Z])(?=.*d)(?=.*[!@#$%^&*()_+])[A-Za-zd][A-Za-zd!@#$%^&*()_+]{7,19}$",
                 required: true,
             },
-            {
-                id:5,
-                name:"confirmPassword",
-                type:"password",
-                placeholder:"Confirm Password",
-                errorMessage:"Password needs to match",
-                label:"Confirm Password:",
-                pattern: "values.password",
-                required: true,
-            }
+            // {
+            //     id:5,
+            //     name:"confirmPassword",
+            //     type:"password",
+            //     placeholder:"Confirm Password",
+            //     errorMessage:"Password needs to match",
+            //     label:"Confirm Password:",
+            //     // pattern: "values.password",
+            //     required: true,
+            // }
         ];
 
-        // let response = await axios.post(`http://localhost:3000/api/users/login`, getUser);
-        // console.log(response.data);
-        // localStorage.setItem('token', response.data)
-        // window.location ='/';
-  
     console.log("re-rendered");
     
-    const handleSubmit = (e) => {
-        e.preventDefault();   
-    };  
+   
 
-    const onChange = (e) => {
+    const handleChange = (e) => {
        setValues({ ...values, [e.target.name]: e.target.value });
     };
         console.log(values);
@@ -89,10 +106,10 @@ import FormInput from '../FormInput';
                                 key={input.id} 
                                 {...input} 
                                 value={values[input.name]} 
-                                onChange={onChange} 
+                                onChange={handleChange} 
                             />
                         ))}
-                        <button>Submit</button>
+                        <button type="submit">Submit</button>
                 </form>         
             </div>
     );  
