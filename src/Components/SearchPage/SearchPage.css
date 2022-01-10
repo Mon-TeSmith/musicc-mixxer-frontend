@@ -5,7 +5,7 @@
 }
 
 h1 {
-    color: rgba(145, 89, 84, 0.968);
+    color: rgb(115, 148, 218);
     margin-top: 30px;
     margin-bottom: 60px;
 }
@@ -19,8 +19,3 @@ div {
 button {
     cursor: pointer;
 }
-
-/* img {
-    url="http%3A%2F%2Fsoundcloud.com%2Fundefined&color=orange_white&size=32" 
-    style="width: 32px; height: 32px;"></iframe>
-} */

@@ -3,12 +3,6 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background: linear-gradient(
-        rgba(228, 100, 100, 0.7),
-        rgba(91, 59, 59, 0.3)
-    ),
-    url("https://github.com/Mon-TeSmith/musicc-mixxer-frontend/blob/a58622a10ef0a18efdd6b0aff3a937b004723df3/public/Images/cassette.jpeg");
-    background-size: cover;
     background-position: center; 
 }
 

@@ -1,5 +1,6 @@
 import { useParams } from "react-router";
 
+
 const Profile = () => {
     const { name } = useParams();
     return (

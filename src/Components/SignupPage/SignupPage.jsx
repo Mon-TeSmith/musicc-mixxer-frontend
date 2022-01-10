@@ -92,7 +92,6 @@ import FormInput from '../FormInput';
     console.log("re-rendered");
     
    
-
     const handleChange = (e) => {
        setValues({ ...values, [e.target.name]: e.target.value });
     };

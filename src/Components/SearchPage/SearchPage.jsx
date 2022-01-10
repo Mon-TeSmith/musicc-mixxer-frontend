@@ -5,7 +5,7 @@ import './SearchPage.css'
 class SearchPage extends Component {
     state = {
         searchValue: "",
-        SoundCloud: []
+        Music: []
     };
 
     handleOnChange = event => {
@@ -16,18 +16,18 @@ class SearchPage extends Component {
         this.makeApiCall(this.state.searchValue);
     };
 
-    makeApiCall = searchInput => {
-        const searchUrl = "https://api.soundcloud.com/connect?client_id=YOUR_CLIENT_ID&redirect_uri=YOUR_REDIRECT_URI&response_type=code";
-        fetch(searchUrl)
-        .then(response => {
-            return response.json();
-        })
-        .then (jsonData => {
-            console.log(jsonData.tracks);
-            this.setState({SoundCloud: jsonData.SoundCloud});
-        });
+    // makeApiCall = searchInput => {
+    //     const searchUrl = 
+    //     // fetch(searchUrl)
+    //     .then(response => {
+    //         return response.json();
+    //     })
+    //     .then (jsonData => {
+    //         console.log(jsonData.tracks);
+    //         this.setState({Music: jsonData.Music});
+    //     });
         
-    };
+    // };
 
     render() {
             
@@ -42,14 +42,14 @@ class SearchPage extends Component {
                         value={this.state.searchValue}
                     /> 
                     <button onClick={this.handleSearch}>Submit:</button>
-                    {this.state.SoundCloud ? (
+                    {this.state.music ? (
                     <div>
                         
                        
-                        {this.state.SoundCloud.map((SoundCloud, index) => (
+                        {this.state.music.map((music, index) => (
                         <div key={index}>
-                            <h1>{SoundCloud.strSoundCloud}</h1>
-                            <img src={"https://w.soundcloud.com/icon/?"} alt="SoundCloud-thumbnail" />
+                            <h1>{music.strMusic}</h1>
+                           
                     </div>
                         ))}
                     </div>

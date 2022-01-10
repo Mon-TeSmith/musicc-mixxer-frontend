@@ -17,20 +17,7 @@ import './Navbar.css';
       <div className="container">
         <div className="navbar-brand">
         <h1>MUSICC MIXXER</h1>
-          <button
-       
-            // eslint-disable-next-line no-template-curly-in-string
-            className={'navbar-burger burger ${isOpen && "is-active"}'}
-            aria-label="menu"
-            aria-expanded="false"
-            onClick={() => setOpen(!isOpen)}
-          >
-
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-          </button>
-        </div>
+      </div>
 
         <div className={'navbar-menu ${isOpen && "is-active"}'}>
           <div className="navbar-start">

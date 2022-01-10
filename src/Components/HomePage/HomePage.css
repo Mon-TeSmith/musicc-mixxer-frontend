@@ -7,23 +7,14 @@ p {
     position: center;
     text-align: center;
     margin: auto;
-    color: rgba(0, 0, 0, 0.735)
+    color: cornsilk
 }
 
-title is-1 {
-    font-style: oblique;
+body {
+    background-image: url('../../Images/knobs.jpeg');
+    background-size: auto;
+    background-repeat: no-repeat;
+   
 
 }
 
-.app {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background: linear-gradient(
-        rgba(228, 100, 100, 0.7),
-        rgba(91, 59, 59, 0.3),
-    );
-    background-size: cover;
-    background-position: center; 
-}
