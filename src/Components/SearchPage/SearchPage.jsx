@@ -16,24 +16,24 @@ class SearchPage extends Component {
         this.makeApiCall(this.state.searchValue);
     };
 
-    // makeApiCall = searchInput => {
-    //     const searchUrl = 
-    //     // fetch(searchUrl)
-    //     .then(response => {
-    //         return response.json();
-    //     })
-    //     .then (jsonData => {
-    //         console.log(jsonData.tracks);
-    //         this.setState({Music: jsonData.Music});
-    //     });
+    makeApiCall = _searchInput => {
+        const searchUrl = 
+        // fetch(searchUrl)
+        .then(response => {
+            return response.json();
+        })
+        .then (jsonData => {
+            console.log(jsonData.tracks);
+            this.setState({Music: jsonData.Music});
+        });
         
-    // };
+    };
 
     render() {
             
         return (
             <div>
-                <h1>Find Collaborators:</h1>
+                <h1>Find Songs:</h1>
                     <input 
                         name="text"
                         type="text"

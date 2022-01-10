@@ -50,7 +50,7 @@ class App extends Component {
               <Route path="login" element={<LoginPage/>} />
               <Route path="signup" element={<SignupPage />} />
               <Route path="search" element={<SearchPage />} />
-             <Route path="profile" element={<Profile />} /> 
+              <Route path="profile" element={<Profile />} /> 
           </Routes>
         </div>
       );
