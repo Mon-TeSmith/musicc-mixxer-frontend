@@ -32,7 +32,7 @@ const Navbar = ({ user }) => {
               className="navbar-item"
               activeClassname="is-active" to="/"
             >
-              Home/
+              Home |
             </NavLink>
 
             <NavLink
@@ -40,7 +40,7 @@ const Navbar = ({ user }) => {
               activeClassName="is-active"
               to="/signup"
             >
-              Signup/
+              Signup |
             </NavLink>
 
             <NavLink
@@ -48,7 +48,7 @@ const Navbar = ({ user }) => {
               activeClassName="is-active"
               to="/login"
             >
-              Login/
+              Login |
             </NavLink>
             {user && (
               <NavLink

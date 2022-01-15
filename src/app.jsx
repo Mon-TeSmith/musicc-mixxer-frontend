@@ -51,7 +51,6 @@ class App extends Component {
           <Route path="/" exact element={<HomePage user={this.state.user} />} />
           <Route path="login" element={<LoginPage user={this.state.user} />} />
           <Route path="signup" element={<SignupPage user={this.state.user} />} />
-
           <Route path="profile" element={<Profile user={this.state.user} />} />
         </Routes>
       </div>
