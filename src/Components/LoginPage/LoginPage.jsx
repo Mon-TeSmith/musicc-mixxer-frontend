@@ -37,7 +37,6 @@ const LoginPage = () => {
             name: "email",
             type: "email",
             placeholder: "Email:",
-
             required: true,
         },
         {
@@ -45,15 +44,12 @@ const LoginPage = () => {
             name: "password",
             type: "password",
             placeholder: "Password:",
-            errorMessage: "Password should be 8-20 characters and should at least include 1 letter, 1 number and 1 special character!",
             label: "Password:",
-            // pattern: "^(?=.*[a-zA-Z])(?=.*d)(?=.*[!@#$%^&*()_+])[A-Za-zd][A-Za-zd!@#$%^&*()_+]{7,19}$",
             required: true,
         },
     ];
 
     console.log("re-rendered");
-
 
     const handleChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value });
@@ -62,7 +58,7 @@ const LoginPage = () => {
     return (
         <div className="app">
             <form onSubmit={handleSubmit}>
-                <h1>Sign In</h1>
+                <h1>Sign-In</h1>
                 {inputs.map((input) => (
                     <FormInput
                         key={input.id}
@@ -71,7 +67,7 @@ const LoginPage = () => {
                         onChange={handleChange}
                     />
                 ))}
-                <button type="submit">Log In</button>
+                <button type="submit">Log-In</button>
             </form>
         </div>
     );

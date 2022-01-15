@@ -90,7 +90,7 @@ class SearchPage extends Component {
         console.log('tracks', this.state.tracks)
         return (
             <div>
-                <h1>Find Songs</h1>
+                <h1>Enter Track Title:</h1>
                 <div className="form">
                     <input
                         name="text"
@@ -115,11 +115,5 @@ class SearchPage extends Component {
         )
     };
 }
-
-
-// let response = await axios.post(`http://localhost:3000/api/users/login`, '');
-//             console.log(response.data);
-//             localStorage.setItem('token', response.data)
-//             window.location ='/';
 
 export default SearchPage;
