@@ -13,9 +13,13 @@ form {
     border-radius: 10px;
 }
 
+form h1 {
+    color: rgb(118, 17, 17)
+}
+
 h1 {
     text-align: center;
-    color: rgb(118, 17, 17);   
+    
 }
 
 button {

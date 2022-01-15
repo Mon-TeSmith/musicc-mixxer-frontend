@@ -1,37 +1,43 @@
 /* eslint-disable no-template-curly-in-string */
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 import './Navbar.css';
 
-  const Navbar = ()=> {
+const Navbar = ({ user }) => {
   const [isOpen, setOpen] = useState(false);
+
+  const logout = () => {
+    localStorage.removeItem('token');
+    window.location = '/login';
+  }
+
   return (
-    
-    
-     <nav
+
+
+    <nav
       className="navbar is primary"
       role="navigation"
       aria-label="main-navigation"
     >
-      
+
       <div className="container">
         <div className="navbar-brand">
-        <h1>MUSICC MIXXER</h1>
-      </div>
+          <h1>MUSICC MIXXER</h1>
+        </div>
 
         <div className={'navbar-menu ${isOpen && "is-active"}'}>
           <div className="navbar-start">
-            
-            <NavLink 
+
+            <NavLink
               className="navbar-item"
-              acitveClassname="is-active" to="/"
+              activeClassname="is-active" to="/"
             >
               Home/
             </NavLink>
 
             <NavLink
               className="navbar-item"
-              acitveClassName="is-active"
+              activeClassName="is-active"
               to="/signup"
             >
               Signup/
@@ -39,19 +45,23 @@ import './Navbar.css';
 
             <NavLink
               className="navbar-item"
-              acitveClassName="is-active"
+              activeClassName="is-active"
               to="/login"
             >
               Login/
             </NavLink>
+            {user && (
+              <NavLink
+                className="navbar-item"
+                activeClassName="is-active"
+                to="/login"
+                onClick={logout}
+              >
+                Logout
+              </NavLink>
+            )}
 
-            <NavLink
-              className="navbar-item"
-              acitveClassName="is-active"
-              to="/search"
-            >
-              Search/
-            </NavLink>
+
           </div>
 
           <div className="navbar-end">
@@ -62,7 +72,7 @@ import './Navbar.css';
           </div>
         </div>
       </div>
-    </nav> 
+    </nav>
 
   )
 }

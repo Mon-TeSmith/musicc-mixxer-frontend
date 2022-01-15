@@ -5,16 +5,16 @@ p {
     font-stretch: normal;
     font-size: 1.1rem;
     position: center;
-    text-align: center;
+    /* text-align: center; */
     margin: auto;
     color: cornsilk
 }
 
 body {
-    background-image: url('../../Images/knobs.jpeg');
+    /* background-image: url('../../Images/knobs.jpeg');
     background-size: auto;
-    background-repeat: no-repeat;
-   
-
+    background-repeat: no-repeat; */
+    min-height: 100vh;
+    background-color: #191b1f;
+    color: cornsilk;
 }
-
