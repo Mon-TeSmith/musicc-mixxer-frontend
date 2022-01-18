@@ -46,6 +46,14 @@ const Navbar = ({ user }) => {
             <NavLink
               className="navbar-item"
               activeClassName="is-active"
+              to="/Profile"
+            >
+              Profile |
+            </NavLink>
+
+            <NavLink
+              className="navbar-item"
+              activeClassName="is-active"
               to="/login"
             >
               Login |

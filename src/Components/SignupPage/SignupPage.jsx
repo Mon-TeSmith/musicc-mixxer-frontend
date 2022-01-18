@@ -60,7 +60,6 @@ const SignupPage = () => {
             placeholder: "Password",
 
             label: "Password:",
-            // pattern: "^(?=.*[a-zA-Z])(?=.*d)(?=.*[!@#$%^&*()_+])[A-Za-zd][A-Za-zd!@#$%^&*()_+]{7,19}$",
             required: true,
         },
         {
@@ -70,7 +69,6 @@ const SignupPage = () => {
             placeholder: "Confirm Password",
 
             label: "Password:",
-            // pattern: "^(?=.*[a-zA-Z])(?=.*d)(?=.*[!@#$%^&*()_+])[A-Za-zd][A-Za-zd!@#$%^&*()_+]{7,19}$",
             required: true,
         },
 

@@ -1,0 +1,31 @@
+/* #title {
+    text-align: center;
+    font-family: arial, sans-serif;
+  }
+  
+  #tables {
+    text-align: center;
+    font-family: "Verdana", Arial, Helvetica, sans-serif;
+    border-collapse: separate;
+    border: 3px solid rgb(41, 35, 35);
+    width: 100%;
+  }
+
+  #tables td, #tables th {
+    border: 2px solid black;
+    padding: 3px;
+  }
+  
+  #tables tr:nth-child(even){background-color: whitesmoke;}
+  
+  #tables tr:hover {background-color: rgb(162, , 151);}
+  
+  #tables th {
+    padding-top: length;
+    padding-bottom: length;
+    text-align: start;
+    background-color: whitesmoke;
+    color: rgba(216, 119, 83, 0.776);
+  } 
+
+   */

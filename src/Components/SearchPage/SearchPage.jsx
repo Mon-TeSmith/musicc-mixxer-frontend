@@ -114,6 +114,7 @@ class SearchPage extends Component {
             </div>
         )
     };
+
 }
 
 export default SearchPage;

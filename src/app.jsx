@@ -5,7 +5,9 @@ import LoginPage from "./Components/LoginPage/LoginPage";
 import SignupPage from "./Components/SignupPage/SignupPage";
 import Profile from "./Components/Profile/Profile";
 import HomePage from "./Components/HomePage/HomePage";
+import SearchCreatives from "./Components/SearchCreatives/SearchCreatives";
 import SearchPage from "./Components/SearchPage/SearchPage";
+import CreativeTable from "./Components/CreativeTable/CreativeTable";
 import TitleBar from "./Components/TitleBar/TitleBar";
 // eslint-disable-next-line no-unused-vars
 import './App.css';
@@ -52,6 +54,7 @@ class App extends Component {
           <Route path="login" element={<LoginPage user={this.state.user} />} />
           <Route path="signup" element={<SignupPage user={this.state.user} />} />
           <Route path="profile" element={<Profile user={this.state.user} />} />
+          {/* <Route path="creatives" element={<Creatives user={this.state.user} />} /> */}
         </Routes>
       </div>
     );
